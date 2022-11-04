@@ -10,15 +10,15 @@ export const App = () => {
   const [bad, setBad] = useState(0);
 
   const onGoodFeedback = () => {
-    setGood(good + 1);
+    setGood(prevState => prevState + 1);
   };
 
   const onNeutralFeedback = () => {
-    setNeutral(neutral + 1);
+    setNeutral(prevState => prevState + 1);
   };
 
   const onBadFeedback = () => {
-    setBad(bad + 1);
+    setBad(prevState => prevState + 1);
   };
 
   const total = good + neutral + bad;
